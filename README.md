@@ -3,6 +3,8 @@
 Scope: 
 App makes a Retrofit call to display Fox images in a recyclerview. 
 
+Please see coroutine branch for Kotline coroutine implementation.
+
 Implementation:
 The project has been implemented following the MVVM architectural design pattern. I used RxJava and LiveData to implement the Observable/Subscriber design pattern to make async calls to the server and update the UI accordingly. 
 
