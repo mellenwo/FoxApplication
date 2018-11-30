@@ -12,6 +12,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
@@ -65,7 +66,7 @@ class Server(val context: Context) {
         return users
     }
 
-    fun getDeferredUsers() : Deferred<List<User>> {
+    fun getDeferredUsers() : Deferred<Response<List<User>>> {
         return apiService.getDeferredUsers()
     }
 
