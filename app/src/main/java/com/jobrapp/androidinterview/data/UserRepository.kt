@@ -3,14 +3,10 @@ package com.jobrapp.androidinterview.data
 import com.jobrapp.androidinterview.androidmanagers.NetManager
 import com.jobrapp.server.Server
 import com.jobrapp.server.User
-import com.jobrapp.server.UserList
 import io.reactivex.Observable
 import javax.inject.Inject
 
 class UserRepository @Inject constructor(var netManager: NetManager){
-
-    private var userList: UserList? = null
-
 
     fun getUsers() : Observable<ArrayList<User>> {
         return Observable.create {
