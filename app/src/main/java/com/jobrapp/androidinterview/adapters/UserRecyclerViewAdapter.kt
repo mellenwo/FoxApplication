@@ -25,7 +25,7 @@ class UserRecyclerViewAdapter(private var items: ArrayList<User>,
         fun onItemClick(position: Int)
     }
 
-    fun replaceData(newItems: ArrayList<User>){ items = newItems }
+    fun replaceData(newItems: ArrayList<User>){ items.addAll(newItems) }
 
     class ViewHolder(private var binding: RvItemUserBinding) :
             RecyclerView.ViewHolder(binding.root) {
@@ -38,6 +38,7 @@ class UserRecyclerViewAdapter(private var items: ArrayList<User>,
             }
 
             binding.executePendingBindings()
+
         }
     }
 }
