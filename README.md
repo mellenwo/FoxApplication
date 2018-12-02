@@ -1,7 +1,7 @@
 # FoxApplication
 
 Scope: 
-App makes a Retrofit call to display Fox images in a recyclerview. 
+App makes a call to the mock server to a retrieve an infinite list of foxes. I added swipe-up to refresh functionality using this third party library: https://github.com/omadahealth/SwipyRefreshLayout. I also replaced the refresh button I had at the bottom, with a refresh icon in the action bar.  
 
 Implementation:
 The project has been implemented following the MVVM architectural design pattern. I used RxJava and LiveData to implement the Observable/Subscriber design pattern to make async calls to the server and update the UI accordingly. 
